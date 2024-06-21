@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Button = ({
   type = "primary",
-  size = "sm",
+  size = "md",
   text = "Submit",
   handleClick,
-}) => {
-  return (
-    <button onClick={handleClick} className={`btn btn-${type} btn-${size}`}>
-      {text}
-    </button>
-  );
-};
+}) => (
+  <button onClick={handleClick} className={`btn btn-${type} btn-${size}`}>
+    {text}
+  </button>
+);
 
 export default Button;

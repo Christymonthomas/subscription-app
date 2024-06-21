@@ -1,28 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Nav />
       <Toaster
-        position="button-right"
+        position="buttom-right"
         toastOptions={{
           duration: 2000,
         }}
       />
       <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
       </Switch>
     </Router>
   );
-};
+}
 
 export default App;
